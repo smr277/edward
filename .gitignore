@@ -31,5 +31,5 @@
 *.out
 *.app
 
-# External Lib Folder
-external/*
+# Bazel items
+bazel*
