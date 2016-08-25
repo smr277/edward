@@ -8,8 +8,13 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
-# 4 space indentation
-[*.py]
+# 2 space indentation
+[*.cc]
+indent_style = space
+indent_size = 2
+
+# 2 space indentation
+[*.h]
 indent_style = space
 indent_size = 2
 
