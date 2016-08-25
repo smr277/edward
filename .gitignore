@@ -33,3 +33,9 @@
 
 # Bazel items
 bazel*
+
+# Kernel items
+kernel/*
+
+# Vagrnat items
+.vagrant/*
