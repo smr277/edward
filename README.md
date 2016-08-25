@@ -5,7 +5,5 @@ Currently, only supported on Mac, however all these steps should work on Linux a
 ####Bazel
 Download [Bazel](http://bazel.io/) and follow install directions. For bash completion, you'll need to download the source and follow instructions. 
 
-####Protobuf
-Download [Protobuf](https://github.com/google/protobuf) library into folder external/. You can test Bazel by running ```bazel build :protobuf``` from within the external/protobuf directory.
-
-####Google Test
+##Editing
+It's suggested to use Sublime Text 3 to edit Project Edward. This ensures that editorconfig can be used to ensure formating. In addition, there will be autocompletions written specifically for Sublime Text that plug into bazel and our headers. 
