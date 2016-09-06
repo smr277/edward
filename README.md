@@ -9,6 +9,13 @@ Download [Bazel](http://bazel.io/) and follow install directions. For bash compl
 ##Editing
 It's suggested to use Sublime Text 3 to edit Project Edward. This ensures that editorconfig can be used to ensure formating. In addition, there will be autocompletions written specifically for Sublime Text that plug into bazel and our headers. 
 
+##Notes on VM stuff:
+###SnapCraft
+Installing: `sudo apt install snapcraft`
+Disable and re-enable webdm if not working
+Needed to install `sudo apt-get --no-install-recommends install virtualbox-guest-utils`
+
+
 ##Advanced
 ###Kernel setup
 ####Vagrant
