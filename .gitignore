@@ -35,7 +35,7 @@
 bazel*
 
 # Kernel items
-kernel/*
+os/*
 
 # Vagrnat items
 .vagrant/*
