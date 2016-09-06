@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "sensor.proto";
+
+package core.sensors;
+
+// In RPY coordinates.
+//	x : Positive towards front of aircraft.
+//	y : Positive towards starboard of aircraft.
+//	z : Positive towards bottom of aicraft.
+message Accelerations {
+	// Acceleration in milli-meter/second.
+	int64 x = 1;
+	// Acceleration in milli-meter/second.
+	int64 y = 2;
+	// Acceleration in milli-meter/second.
+	int64 z = 3;
+	// Timestamp in milliseconds since epoch.
+	int64 timestamp = 4;
+}

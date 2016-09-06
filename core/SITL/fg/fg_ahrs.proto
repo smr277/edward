@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "core/protos/ahrs.proto";
+
+package core.sitl.sensors;
+
+message NoiseConfig {
+	double noise_x = 1;
+	double noise_y = 2;
+	double noise_z = 3;
+
+	double initialize_error_x = 4;
+	double initialize_error_x = 5;
+	double initialize_error_x = 6;
+}
+
+message AhrsConfig {
+	string fg_port = 1;
+	NoiseConfig gyro_config = 2;
+	NoiseConfig accel_config = 3;
+	enum Algorithm {
+		DIRECT_PASSTHROUGH = 0;
+	}
+}
+
+

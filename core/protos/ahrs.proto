@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package core.sensors;
+
+// Everything is in RPY coordinates.
+//	x : Positive towards front of aircraft.
+//	y : Positive towards starboard of aircraft.
+//	z : Positive towards bottom of aicraft.
+
+message ComputedAhrs {
+	// Computed pitch in radians.
+	double computed_pitch = 1;
+	// Computed roll in radians.
+	double computed_roll = 2;
+	// Computed yaw in radians, from true north.
+	double computed_yaw = 3;
+
+	// Computed latitude in decimal format.
+	double computed_lat = 4;
+	// Computed longtitude in decimal format.
+	double computed_long = 5;
+
+	// Timestamp in milliseconds since epoch.
+	int64 timestamp = 6; 
+}
+
+message AdvancedAhrs {
+	// The standard AHRS message.
+	ComputedAhrs standard_ahrs = 1;
+
+	// Computed velocity in the x-direction.
+	double computed_velocity_x = 2;
+	// Computed velocity in the y-direction.
+	double computed_velocity_y = 3;
+	// Computed velocity in the z-direction.
+	double computed_velocity_z = 4;
+	// Computed velocity magnitude.
+	double computed_velocity = 5; 
+}
+
+service Ahrs {
+	rpc GetAhrs(google.protobuf.Empty) returns (ComputedAhrs);
+	rpc GetAdvancedAhrs(google.protobuf.Empty) returns (AdvancedAhrs);
+}
+

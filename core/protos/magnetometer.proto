@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package core.sensors;
+
+// Everything is in RPY coordinates.
+//	x : Positive towards front of aircraft.
+//	y : Positive towards starboard of aircraft.
+//	z : Positive towards bottom of aicraft.
+
+// Magnetic measurements.
+message Magnetometer {
+	// Magnetic field in the x-direction in milli-guass.
+	double x = 1;
+	// Magnetic field in the y-direction in milli-guass.
+	double y = 2;
+	// Magnetic field in the z-direction in milli-guass.
+	double z = 3;
+	// Timestamp in milliseconds since epoch.
+	int64 timestamp = 4;
+}

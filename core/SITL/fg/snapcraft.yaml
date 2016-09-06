@@ -1,0 +1,10 @@
+name: edward-sitl-flightgear  # the name of the snap
+version: 0  # the version of the snap
+summary: SITL connect to FlightGear  # 79 char long summary
+description: Project Edward connection of autopilot to FlightGear simulator.  # a longer description for the snap
+confinement: devmode  # use "strict" to enforce system access only via declared interfaces
+
+parts:
+  cam:
+    plugin: bazel
+    source: git://github.com/mikix/golang-static-http

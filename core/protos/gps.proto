@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package core.sensors;
+
+// GPS location.
+message Location {
+	// Latitude in decimal format.
+	double lat = 1;
+	// Longtitude in decimal format.
+	double long = 2;
+	// Timestamp in milliseconds since epoch.
+	int64 timestamp = 4;
+}

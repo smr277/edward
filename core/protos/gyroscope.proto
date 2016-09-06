@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "sensor.proto";
+
+package core.sensors;
+
+// In RPY coordinates.
+//	Roll : Rotation around X axis.
+//	Pitch: Rotation around Y axis.
+//	Yaw: Rotation around Z axis.
+message Rates {
+	// Roll rate in milliradians/second.
+	double roll_rate = 1; 
+	// Pitch rate in milliradians/second.
+	double pitch_rate = 2;
+	// Yaw rate in milliradians/second.
+	double yaw_rate = 3;
+	// Timestamp in milliseconds since epoch.
+	int64 timestamp = 4;
+}
